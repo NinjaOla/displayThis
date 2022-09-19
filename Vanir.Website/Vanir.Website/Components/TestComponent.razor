@@ -1,0 +1,11 @@
+﻿<h3>TestComponent</h3>
+
+<p>Path: @linkGenerator.GetPathByPage(MyContext, "ArticleDetails",null,new{ Slug = "vanirs-new-website"})</p>
+<p>Uri: </p>
+@code {
+    [Parameter]
+    public HttpContext MyContext { get; set; }
+
+    [Inject]
+    public LinkGenerator linkGenerator{ get; set; }
+}

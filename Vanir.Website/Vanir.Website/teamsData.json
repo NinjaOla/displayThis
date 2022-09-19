@@ -1,0 +1,441 @@
+[
+  {
+    "name": "management",
+    "prettyName": "Management",
+    "is_published": true,
+    "members": [
+      {
+        "name": "H�kon Lundberg",
+        "role": "CEO",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/nukezilla"
+          },
+          {
+            "icon": "fa-linkedin",
+            "url": "https://www.linkedin.com/in/h%C3%A5kon-lundberg-6177536a/"
+          }
+        ],
+        "imageurl": "/images/nukezilla.jpg"
+      },
+      {
+        "name": "Carlos Sebastian Eliassen Nu�ez",
+        "role": "Esports Director",
+        "socials": [
+          {
+            "icon": "fa-facebook",
+            "url": "https://carlos.facebook.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitter",
+            "url": "https://carlos.twitter.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://carlos.twitch.m42vanir.com"
+          },
+          {
+            "icon": "fa-linkedin",
+            "url": "https://carlos.linkedin.m42vanir.com"
+          }
+        ],
+        "imageurl": "/images/morguez.jpg"
+      },
+      {
+        "name": "Mikkel Bull Junker",
+        "role": "Board Director & Business Manager",
+        "socials": [
+          {
+            "icon": "fa-facebook",
+            "url": "https://mikkel.facebook.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitter",
+            "url": "https://mikkel.twitter.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://mikkel.twitch.m42vanir.com"
+          },
+          {
+            "icon": "fa-linkedin",
+            "url": "https://mikkel.linkedin.m42vanir.com"
+          },
+          {
+            "icon": "fa-instagram",
+            "url": "https://mikkel.instagram.m42vanir.com"
+          }
+        ],
+        "imageurl": "/images/bullsheng.jpg"
+      },
+      {
+        "name": "Sondre Str�mholm",
+        "role": "Community Marketing Lead",
+        "socials": [
+          {
+            "icon": "fa-facebook",
+            "url": "https://sondre.facebook.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitter",
+            "url": "https://sondre.twitter.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://sondre.twitch.m42vanir.com"
+          },
+          {
+            "icon": "fa-linkedin",
+            "url": "https://sondre.linkedin.m42vanir.com"
+          }
+        ],
+        "imageurl": "/images/Smuff.jpg"
+      },
+      {
+        "name": "Ola Flekke Mathiesen",
+        "role": "CTO",
+        "socials": [
+          {
+            "icon": "fa-facebook",
+            "url": "https://ola.facebook.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitter",
+            "url": "https://ola.twitter.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://ola.twitch.m42vanir.com"
+          },
+          {
+            "icon": "fa-linkedin",
+            "url": "https://ola.linkedin.m42vanir.com"
+          },
+          {
+            "icon": "fa-instagram",
+            "url": "https://ola.instagram.m42vanir.com"
+          }
+        ],
+        "imageurl": "/images/ninjaola.jpg"
+      },
+      {
+        "name": "Peter Valderhaug",
+        "role": "Mental Coach",
+        "socials": [
+          {
+            "icon": "fa-facebook",
+            "url": "https://peter.facebook.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitter",
+            "url": "https://peter.twitter.m42vanir.com"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://peter.twitch.m42vanir.com"
+          },
+          {
+            "icon": "fa-linkedin",
+            "url": "https://peter.linkedin.m42vanir.com"
+          },
+          {
+            "icon": "fa-instagram",
+            "url": "https://peter.instagram.m42vanir.com"
+          }
+        ],
+        "imageurl": "/images/phatlegs.jpg"
+      }
+    ]
+  },
+  {
+    "name": "league-of-legends-nlc",
+    "prettyName": "League of Legends NLC",
+    "members": [
+      {
+        "name": "Nille",
+        "role": "Top",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/NilleLoL"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/nillenalley"
+          }
+        ],
+        "imageurl": "/images/Nille.jpg"
+      },
+      {
+        "name": "Noodle",
+        "role": "Jungle",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/NoodleL0L1"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/hedonisten1"
+          }
+        ],
+        "imageurl": "/images/Noodle.jpg"
+      },
+      {
+        "name": "Sahira",
+        "role": "Mid",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/sahirathelegend"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/sahirathelegend"
+          }
+        ],
+        "imageurl": "/images/Sahira.jpg"
+      },
+      {
+        "name": "Kehvo",
+        "role": "ADC",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/KehvoLoL"
+          }
+        ],
+        "imageurl": "/images/Kehvo.jpg"
+      },
+      {
+        "name": "Quixeth",
+        "role": "Support",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/Quixeth"
+          }
+        ],
+        "imageurl": "/images/Quixeth.jpg"
+      },
+      {
+        "name": "Flash",
+        "role": "Head Coach",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/sychoflash"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/sychoflash"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Dacreq",
+        "role": "Coach",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/Dacreqlol"
+          }
+        ],
+        "imageurl": ""
+      }
+    ],
+    "description": ""
+  },
+  {
+    "name": "csgo",
+    "prettyName": "CSGO",
+    "members": [
+      {
+        "name": "Christopher 'Bekk1' Bekken",
+        "role": "Player",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/Bekk1cs"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/bekk1"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Martin 'hyp3' Lyng�s",
+        "role": "Player",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/hyp3CS"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/hyp3_cs"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Tobias 'Zypno' Lillest�l",
+        "role": "Player",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/lillest_tobias"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/zypnocs"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Simon 'simon' Ferngren",
+        "role": "Player",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/simonb0b"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/simonb0b"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Jonathan 'delle' Ahlstedt",
+        "role": "Player",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/dellEexd"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/delleecs"
+          }
+        ],
+        "imageurl": ""
+      }
+    ],
+    "description": "Our CSGO team participates in 1st division Telialigaen"
+  },
+  {
+    "name": "league-of-legends-tl",
+    "prettyName": "League of Legends Telialigaen",
+    "members": [
+      {
+        "name": "Lars Sigmund 'Dark Santa' Marvik",
+        "role": "TOP",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/DarkSantaLoL"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Mathias 'Yds' Ydstie",
+        "role": "JNG",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/MYdstie"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/ydstie"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Sebastian 'BOFFEN' Gsell",
+        "role": "MID",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/BoffenLoL"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://www.twitch.tv/boffenz"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Casper 'Duzzskull' Wold",
+        "role": "ADC",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/duzzskull"
+          }
+        ],
+        "imageurl": ""
+      },
+      {
+        "name": "Ali 'BlazingFire' Sunbul",
+        "role": "SUP",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/blazingfire_lol"
+          }
+        ],
+        "imageurl": ""
+      }
+    ],
+    "description": "Our Telialigaen team participates in Telialigaen"
+  },
+  {
+    "name": "hearthstone",
+    "prettyName": "Hearthstone",
+    "members": [
+      {
+        "name": "Jonathan 'Chewie' Dahl Lindstr�m",
+        "role": "Player",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/ChewieHS"
+          },
+          {
+            "icon": "fa-twitch",
+            "url": "https://twitch.tv/chewie_hs"
+          }
+        ],
+        "imageurl": ""
+      }
+    ]
+  },
+  {
+    "name": "staff",
+    "prettyName": "Staff",
+    "members": [
+      {
+        "name": "Ole Aasheim",
+        "role": "PR, Media & Community",
+        "socials": [
+          {
+            "icon": "fa-twitter",
+            "url": "https://twitter.com/OleAasheim"
+          }
+        ],
+        "imageurl": ""
+      }
+    ]
+  }
+]

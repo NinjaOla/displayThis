@@ -1,0 +1,92 @@
+﻿@using Vanir.Website.Models
+@using Vanir.Website.Services
+@if (IsDisplayHeader)
+{
+    <h3>PersonListComponent</h3>    
+}
+
+<div class="">
+
+    @if(Persons != null)
+    {
+        <ul class="person-container-grid">
+            @if(ViewMode == EnumerableViewMode.List)
+            {
+
+                foreach(var person in Persons)
+                {
+                    <li>
+                        <a href="@linkGenerator.GetUriByPage(MyContext,"PersonDetails",null, new{Slug = @person.Slug.Current})" class="" >@person.Name</a>
+                    </li>
+                }
+            }
+            else
+            {
+                foreach(var p in Persons)
+                {
+                    <li className="person">
+                        <div className="team_box">
+                                    <figure class="circular--portrait">
+                                        @{
+                                            var imgsrc = SanityServices.GetImageUrl(p.Image);
+                                        }
+                                      <img class="" src="@imgsrc" alt="#" />
+                                    </figure>
+                                
+                                    @if(p.Socials != null && p.Socials.Count > 0)
+                                    {     
+                                        <ul className="social_team">
+                                            @foreach(var social in p.Socials)
+                                            {
+                                            <li>
+                                                <a target="_blank" rel="noopener noreferrer" href="@social.Url">
+                                                    <i class="fab @_socialIconDict[social.Type]" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            }
+                                        </ul>
+                                     }
+                                    <h3>@p.Name</h3>
+                                    <p>@p.Role</p>
+                              </div>
+                    </li>
+                }
+            }
+        </ul>
+    }
+</div>
+
+
+
+
+@code {
+    private Dictionary<SocialMediaType, string> _socialIconDict = new Dictionary<SocialMediaType, string>()
+    {
+        {SocialMediaType.FACEBOOK, "fa-facebook"},
+        {SocialMediaType.INSTAGRAM, "fa-instagram"},
+        {SocialMediaType.TWITCH, "fa-twitch"},
+        {SocialMediaType.TWITTER, "fa-twitter"},
+        {SocialMediaType.LINKEDIN, "fa-linkedin"},
+        {SocialMediaType.YOUTUBE, "fa-youtube"},
+        {SocialMediaType.MAIL, "fa-mail"}
+    };
+
+    [Inject]
+    VNRSanityServices SanityServices{ get; set; }
+
+    [Parameter]
+    public bool IsDisplayHeader{ get; set; }
+
+    [Parameter]
+    public IEnumerable<Person> Persons{ get; set; }
+
+    [Parameter]
+    public EnumerableViewMode ViewMode { get; set; } = EnumerableViewMode.List;
+
+    [Inject]
+    public LinkGenerator linkGenerator{ get; set; }
+
+    [Parameter]
+    public HttpContext MyContext { get; set; }
+
+}

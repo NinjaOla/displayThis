@@ -1,0 +1,20 @@
+﻿@page "/teams"
+@model Vanir.Website.Pages.TeamsListModel
+@{
+	var x = "";
+}
+
+<section class="Vision">
+	<div class="container">
+		<div class="Headings">	
+			<h1 class="section-title">Teams</h1>
+			<ul>
+			@foreach(var team in Model.Teams){
+				<li>
+					<a asp-page="TeamDetails" asp-route-Slug="@team.Slug.Current">@team.Name</a>
+				</li>
+			}
+			</ul>
+		</div>
+	</div>
+</section>	

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@(ViewData["Title"] ?? "Vanir")</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    @*<link rel="stylesheet" href="~/Vanir.Website.styles.css" asp-append-version="true" />*@
+	<link rel="stylesheet" href="~/css/vanir.css" asp-append-version="true" />
+	@*<link rel="stylesheet" href="~/css/fa-test.css" />*@
+	@await RenderSectionAsync("styles", required: false)
+	<script src="https://kit.fontawesome.com/a4758f9f21.js" crossorigin="anonymous"></script>
+	<script>
+		function openNav() {
+			document.getElementById("mySidepanel").style.display = "unset"; 
+			}
+							
+			function closeNav() {
+			document.getElementById("mySidepanel").style.display = "none"; 
+			}
+	</script>
+</head>
+<body>
+
+
+<header>
+	<div class="headermobile">
+		<nav id="mySidepanel" class="sidepanel" style="display:none;">
+			<div class="headerpanel">
+				<button class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
+				<img src="~/images/VANIR_Logo_Gold_RGB.svg" alt="Vanir-Logo" class="headerpanellogo">
+			</div>
+			<nav>
+			<ul class="grid-one">
+				<li><a asp-page="Index" onclick="closeNav()">Home <i class="fa-solid fa-angle-right"></i></a></li>
+				<li><a asp-page="ExtShop">Shop <i class="fa-solid fa-angle-right"></i></a></li>
+				<li><a asp-page="ArticleList">Articles <i class="fa-solid fa-angle-right"></i></a></li>
+				<li><a asp-page="TeamsList">Teams <i class="fa-solid fa-angle-right"></i></a></li>
+				<li><a asp-page="Index" asp-fragment="Partnerships" onclick="closeNav()">Partnerships <i class="fa-solid fa-angle-right"></i></a></li>
+				<li><a asp-page="Index" asp-fragment="Vision" onclick="closeNav()">About <i class="fa-solid fa-angle-right"></i></a></li>
+			</ul>
+			<ul class="sidepanel-socials">
+				<li><a href="https://twitter.vanir.gg" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+				<li><a href="https://discord.vanir.gg" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+				<li><a href="https://youtube.vanir.gg" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+				<li><a href="https://twitch.vanir.gg" target="_blank"><i class="fa-brands fa-twitch"></i></a></li>
+				<li><a href="https://facebook.vanir.gg" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+				<li><a href="https://linkedin.vanir.gg" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+				<li><a href="https://instagram.vanir.gg" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+				<li><a href="https://tiktok.vanir.gg" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+			</ul>
+			</nav>
+
+		</nav>
+		<div class="tab" id="Tab">
+			<button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+		</div>
+		<div class="headercenter"><a asp-page="Index"><img src="~/images/VANIR_Logo_Gold_RGB.svg" alt="Vanir-Logo" class="mobilelogo"></a></div>
+
+	</div>
+	<div class="headerdiv">
+		<div class="leftflex"><a asp-page="Index"><img src="~/images/VANIR_Logo_Gold_RGB.svg" alt="Vanir-Logo" class="headerlogo"></a></div>
+		<nav class="rightflex">
+		<ul>	
+			@*<li><span class="navtext"><a asp-page="Index">HOME</a></span></li>*@
+			<li><span class="navtext"><a asp-page="ExtShop">SHOP</a></span></li>
+			<li><span class="navtext"><a asp-page="ArticleList">ARTICLES</a></span></li>
+			<li><span class="navtext"><a asp-page="TeamsList">TEAMS</a></span></li>
+			<li><span class="navtext"><a asp-page="Index" asp-fragment="Partnerships">PARTNERSHIPS</a></span></li>
+			<li><span class="navtext"><a asp-page="Index" asp-fragment="Vision">ABOUT</a></span></li>
+		</ul>
+  	</nav>
+	</div>
+</header>
+<main>
+@RenderBody()
+</main>
+<footer>
+	<div class="container">
+		<div class="footerdiv">
+			<div class="footer-nav">
+				<a asp-page="index"><img src="~/images/VANIR_Logo_Gold_RGB.svg" alt="Gold-Logo" class="footerlogo"></a>
+					<ul class="footer-vanir">
+						<h3 class="footertitle">Vanir</h3>
+							<li><a asp-page="Index" asp-fragment="Vision">About</a></li>
+							<li><a asp-page="Index" asp-fragment="Partnerships">Partnerships</a></li>
+							<li><a href="https://drive.google.com/drive/folders/151LuZvyVDyrP5_VugZ6y5qpf85DHAMwx?usp=sharing" target="_blank">Brand</a></li>
+							<li><a asp-page="ContactUs">Contact</a></li>
+					</ul>
+					<ul class="footer-teams">
+							<h3 class="footertitle">Teams</h3>
+							<li><a asp-page="TeamDetails" asp-route-slug="nlc">League of Legends</a></li>
+							<li><a asp-page="TeamDetails" asp-route-slug="cs-go">CS:GO</a></li>
+							<li><a asp-page="TeamsList">All Teams</a></li>
+					</ul>
+			
+					<ul class="footer-shop">
+							<h3 class="footertitle">Shop</h3>
+							<li><a asp-page="ExtShop">All Products</a></li>
+							<li><a href="https://esportmerch.no/pages/faq">FAQ</a></li>
+							<li><a href="https://esportmerch.no/pages/kjopsvilkar">Terms of Purchase</a></li>
+							<li><a href="mailto:support@esportmerch.no">Support</a></li>
+					</ul>
+				</div>
+			<div class="footer-right">
+					<ul class="footer-socials">
+						<li><a href="https://twitter.vanir.gg" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="https://discord.vanir.gg" target="_blank"><i class="fab fa-discord"></i></a></li>
+						<li><a href="https://youtube.vanir.gg" target="_blank"><i class="fab fa-youtube"></i></a></li>
+						<li><a href="https://twitch.vanir.gg" target="_blank"><i class="fab fa-twitch"></i></a></li>
+						<li><a href="https://facebook.vanir.gg" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="https://linkedin.vanir.gg" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+						<li><a href="https://instagram.vanir.gg" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="https://tiktok.vanir.gg" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+					</ul>
+				<div class="footer-copyright">
+					<p class="copyright">© 2017-@DateTime.Now.Year.ToString(). Vanir Esports and Entertainment. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+	
+    @await RenderSectionAsync("scripts", required: false)
+</body>
+</html>

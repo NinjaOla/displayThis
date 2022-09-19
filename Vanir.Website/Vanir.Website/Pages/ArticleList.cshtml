@@ -1,0 +1,15 @@
+﻿@page "/articles"
+@using Vanir.Website.Components
+@using Vanir.Website.Models
+@using static Vanir.Website.Components.ArticleListComponent
+@model Vanir.Website.Pages.ArticleListModel
+@{
+}
+<section class="Vision">
+	<div class="container">
+		<div class="Headings">	
+			<h1 class="section-title">Articles</h1>
+			<component type="@typeof(ArticleListComponent)" param-ViewMode=@(EnumerableViewMode.Grid) param-MyContext=@(HttpContext) param-IsDisplayHeader="@(false)" render-mode="Static"/>
+		</div>
+	</div>
+</section>	

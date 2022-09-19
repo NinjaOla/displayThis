@@ -1,0 +1,102 @@
+﻿@using Sanity.Linq.BlockContent
+@using Vanir.Website.Models
+@using Vanir.Website.Services
+<div class="">
+
+
+    @if (IsDisplayHeader)
+    {
+        <h3>Articles</h3>
+
+    }
+
+    @if(Articles != null)
+    {
+
+        if(ViewMode == EnumerableViewMode.List)
+        {
+        <ul>
+            @foreach(var article in Articles){
+                <li>
+	                <a href="@linkGenerator.GetUriByPage(MyContext,"ArticleDetails",null, new {Slug = article.Slug.Current})">@article.Title</a>
+                </li>
+            } 
+        </ul>
+        }
+        else
+        {
+      @*      <div class="articles-gridview-container">*@
+                <ul class="article-posts-list">
+                    @foreach (var article in Articles)
+                    {
+                        <li class="article-post">
+                            <div class="article-post-img">
+                            <a href="@linkGenerator.GetUriByPage(MyContext,"ArticleDetails",null, new {Slug = article.Slug.Current})">
+                              <div class="bg-image">
+                                  <img src="@SanityServices.GetImageUrl(article.Image)" />
+                              </div>
+                            </a>
+                          </div>
+                          <div class="article-post-meta">
+                            <a href="@linkGenerator.GetUriByPage(MyContext,"ArticleDetails",null, new {Slug = article.Slug.Current})">
+                              <h2 class="article-post-title">@article.Title</h2>
+                            </a>
+                            </div>
+                        </li> 
+                    }
+                
+                </ul>
+            
+    @*        </div>*@
+        
+        }
+
+    }
+
+</div>
+@code {
+
+    [Parameter]
+    public bool IsDisplayHeader { get; set; }
+
+    [Parameter]
+    public int NrToDisplay { get; set; } = 0;
+
+    [Parameter]
+    public HttpContext MyContext { get; set; }
+
+    [Parameter]
+    public EnumerableViewMode ViewMode{ get; set; }
+
+    [Inject]
+    public LinkGenerator linkGenerator{ get; set; }
+
+    [Inject] 
+    ArticlesService _articleService{ get; set; }
+
+    [Inject]
+    VNRSanityServices SanityServices{ get; set; }
+
+
+    public List<Article> Articles{ get; set; }
+
+
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        var arts = await _articleService.GetArticles();
+        arts = arts.OrderByDescending(a => a.TimeStampUTC);
+        arts = arts.Where(a => a.IsPublic == true);
+
+        if(NrToDisplay > 0)
+        {
+            arts = arts.Take(NrToDisplay);
+        }
+        Articles = arts.ToList();
+
+        await base.OnInitializedAsync();
+    }
+}

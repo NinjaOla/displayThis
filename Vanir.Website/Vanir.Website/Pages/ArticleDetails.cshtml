@@ -1,0 +1,37 @@
+﻿@page "/article/{slug:required}"
+@using Sanity.Linq.BlockContent
+@model Vanir.Website.Pages.ArticleDetailsModel
+@{
+	@if(Model.Article != null){
+		ViewData["Title"] = Model.Article.Title;
+	}
+}
+    
+
+<section class="Vision">
+	<div class="container article-details">
+			@if(Model.Article != null)
+			{
+				var html = await Model._sHtmlBuilder.BuildAsync(Model.Article.Content);
+				
+				<div class="Headings">
+					<h1 class="section-title">@Model.Article.Title</h1>
+					@if(!string.IsNullOrEmpty(Model.Article.IFrame)){
+						<figure>
+							@Html.Raw(Model.Article.IFrame)
+						</figure>
+					}else if(Model.Article.Image != null){
+						<figure>
+							<img src="@Model.SanityService.GetImageUrl(Model.Article.Image)" alt="article main image"/>
+						</figure>
+					}
+
+					<div class="text-left">
+						@Html.Raw(html)
+					</div>
+				</div>
+
+			}
+
+	</div>
+</section>	

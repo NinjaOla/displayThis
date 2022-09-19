@@ -1,0 +1,79 @@
+﻿@page
+@using Vanir.Website.Components
+@using Vanir.Website.Models
+@using static Vanir.Website.Components.ArticleListComponent
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="Intro">
+	<div class="container">
+		<div class="Headings">	
+			<h1 class="section-title">HOME OF <span class="vnr-text-primary">VANIR</span></h1>
+		</div>
+		<component type="@typeof(ArticleListComponent)" param-NrToDisplay=@(8) param-ViewMode=@(EnumerableViewMode.Grid) param-MyContext=@(HttpContext) param-IsDisplayHeader="@(false)" render-mode="Static"/>
+	</div>
+</section>	
+@*<section class="MainPartners">
+	<div class="MainPartnerLogos">
+		<a href="https://firi.com/" target="_blank"><img src="images/powered_by_Firi_White.svg" alt="Firi" class="MainPartners-Firi"></a>
+	</div>
+</section>	*@
+<section id="Teams" class="Teams">
+	<div class="container">
+		<div class="Headings">
+			<h1 class="section-title">MEET THE <span class="vnr-text-primary">TEAMS</span></h1>
+			<h2 class="section-subtitle">The best of the best.</h2>
+		</div>
+		<div class="Games">
+			<a asp-page="TeamDetails" asp-route-slug="nlc"><img src="~/images/LoLButton.png" alt="LoLImage" class="GameLoL"></a>
+			<a asp-page="TeamDetails" asp-route-slug="cs-go"><img src="~/images/CSGOButton.png" alt="CSGOImage" class="GameCSGO"></a>
+		</div>
+	</div>
+</section>	
+<section id="Partnerships" class="Partnerships">
+	<div class="container">
+		<div class="Headings">  
+			<h1 class="section-title">OUR <span class="vnr-text-primary">PARTNERSHIPS</span></h1>
+				<h2 class="section-subtitle">Do you want to partner with us?</h2>
+				<p>Send us an email at <a target="_blank" href="mailto:contact@vanir.gg">contact@vanir.gg</a></p>
+		</div>
+@*		<div class="AllPartnerLogos">	
+		<a href="https://firi.com/" target="_blank"><img src="images/Firi-Logo_Blue.svg" alt="Firi" class="Partnership-Firi"></a>
+		</div>*@
+	</div>	
+</section>	
+<section id="Vision" class="Vision">
+	<div class=container>
+		<div class="Headings">	
+			<h1 class="section-title">VANIR <span class="vnr-text-primary">VISION</span></h1>
+			<h2 class="section-subtitle">Distinguishing the Vanir culture.</h2>
+		</div>
+		<br />
+			<p class="MainText">
+				Our vision and values are developed with our entire team including unique insight from our  esport coaches and players. To deliver excellence in all of our services we must always seek to understand our biases, thus welcoming critique, feedback and input from the entire organization as well as the entire gaming-and esports-scene.
+		Our vision is consistent: We set players first and their mental health and development opportunities is our number one priority. 
+		Our shared values are aiding us to live our vision day-to-day,
+		</p>
+		<h4>
+		Mental Health
+		</h4>
+		<p class="MainText">
+			We play a critical role in protecting the mental health of professional esport athletes and those involved in the gaming community. We consider this role a privilege and we set people first. We take pride in providing coaching, counseling, trainings, and an environment designed to help  our members grow and prosper.
+
+		</p>
+		<h4>
+		Social responsibility
+		</h4>
+		<p class="MainText">
+		We believe that maintaining perceived inclusion is a key factor to be successful in operating in a virtual world. We take responsibility by building arenas that attend to humans regardless of individual attributes.  Additionally, we work towards strengthening the bond and understanding between parent and children through our educational and developmental approach to gaming.
+		</p>
+		<h4>
+		Be human
+		</h4>
+		<p class="MainText">
+		We expect you to fuck up and you can expect us to fuck up. You can expect us to be transparent and always strive to better ourselves and we expect the same from you. Being human means having flaws and the best way to better ourselves is to acknowledge our lack of perfection and then we grow together.
+		</p>
+			</div>
+</section>
